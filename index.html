@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Under Construction</title>
+    <style>
+      :root {
+        --bg0: #05060a;
+        --bg1: #0b1020;
+        --card: rgba(255, 255, 255, 0.06);
+        --cardBorder: rgba(255, 255, 255, 0.12);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --muted2: rgba(255, 255, 255, 0.52);
+        --accent: #7c3aed;
+        --accent2: #22d3ee;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background:
+          radial-gradient(900px 600px at 15% 10%, rgba(124, 58, 237, 0.25), transparent 60%),
+          radial-gradient(700px 500px at 85% 15%, rgba(34, 211, 238, 0.18), transparent 55%),
+          radial-gradient(900px 700px at 50% 95%, rgba(124, 58, 237, 0.16), transparent 60%),
+          linear-gradient(180deg, var(--bg0), var(--bg1));
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .wrap { width: min(920px, 100%); }
+
+      .card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--cardBorder);
+        border-radius: 18px;
+        padding: 26px 22px;
+        overflow: hidden;
+        box-shadow:
+          0 18px 55px rgba(0, 0, 0, 0.55),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: radial-gradient(1200px 420px at 50% -10%,
+            rgba(124, 58, 237, 0.25),
+            transparent 55%);
+        pointer-events: none;
+        opacity: 0.7;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(0, 0, 0, 0.22);
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.2px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, var(--accent2), var(--accent));
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+      }
+
+      h1 {
+        margin: 16px 0 10px;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 62ch;
+      }
+
+      .grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      @media (min-width: 720px) {
+        .card { padding: 34px 34px; }
+        .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      }
+
+      .panel {
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        border-radius: 14px;
+        padding: 14px;
+      }
+
+      .k { color: var(--muted2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; }
+      .v { margin-top: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.10);
+        border-color: rgba(255, 255, 255, 0.26);
+      }
+
+      footer {
+        margin-top: 14px;
+        color: rgba(255, 255, 255, 0.42);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <section class="card" aria-label="Under construction notice">
+        <div class="badge">
+          <span class="dot" aria-hidden="true"></span>
+          Site is under construction
+        </div>
+
+        <h1>Coming soon.</h1>
+        <p>
+          This page is live so you can verify the domain + hosting are working. If you can see this,
+          your deployment is set up correctly.
+        </p>
+
+        <div class="grid" role="list">
+          <div class="panel" role="listitem">
+            <div class="k">Domain</div>
+            <div class="v" id="domain">—</div>
+          </div>
+          <div class="panel" role="listitem">
+            <div class="k">Checked at</div>
+            <div class="v" id="checkedAt">—</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="/" rel="nofollow">Refresh</a>
+          <a class="btn" href="https://dnschecker.org/" target="_blank" rel="noreferrer noopener">
+            DNS checker
+          </a>
+        </div>
+
+        <footer>
+          Tip: If the domain just changed, DNS propagation can take a bit. This page is intentionally
+          simple so it loads fast and is easy to recognize.
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var domainEl = document.getElementById("domain");
+        var checkedEl = document.getElementById("checkedAt");
+        if (domainEl) domainEl.textContent = window.location.host || window.location.hostname || "localhost";
+        if (checkedEl) checkedEl.textContent = new Date().toLocaleString();
+      })();
+    </script>
+  </body>
+</html>
