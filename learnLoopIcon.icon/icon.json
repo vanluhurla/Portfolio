@@ -1,0 +1,75 @@
+{
+  "fill" : {
+    "solid" : "extended-gray:1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "automatic"
+            }
+          ],
+          "image-name" : "0_infinite.svg",
+          "name" : "0_infinite",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              92.87484299527944,
+              -34.44012104418994
+            ]
+          }
+        },
+        {
+          "image-name" : "1_pinkCard.svg",
+          "name" : "1_pinkCard",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              92.87484299527944,
+              -34.71982419718984
+            ]
+          }
+        },
+        {
+          "image-name" : "2_purpleCard.svg",
+          "name" : "2_purpleCard",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              11.648280495279437,
+              -15.719823261506406
+            ]
+          }
+        },
+        {
+          "image-name" : "3_blueCard.svg",
+          "name" : "3_blueCard",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              -59.65607734372054,
+              0.2797031530001277
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
