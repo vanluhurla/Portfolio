@@ -307,12 +307,15 @@
         border-radius: 14px;
         overflow: hidden;
         transition: transform 120ms ease;
+        cursor: pointer;
       }
 
       .btnStore img {
-        height: var(--btnH);
+        height: 100%;
         width: 100%;
         display: block;
+        object-fit: contain;
+        pointer-events: none;
       }
 
       .btnStore:hover { transform: translateY(-1px); }
